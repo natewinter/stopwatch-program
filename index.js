@@ -26,8 +26,6 @@ function updateTime() {
   elapsedTime = Date.now() - startTime;
   secs = Math.floor((elapsedTime / 1000) % 60);
   mins = Math.floor((elapsedTime / (1000 * 60)) % 60);
-  // hrs = Math.floor((elapsedTime / (1000 * 60 * 60)) % 60);
-
-  console.log(mins);
+  hrs = Math.floor((elapsedTime / (1000 * 60 * 60)) % 60);
   timeDisplay.textContent = `${hrs}:${mins}:${secs}`;
 }
